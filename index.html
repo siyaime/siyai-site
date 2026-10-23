@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>СИЯЙ — пилатес на реформерах и растяжка в гамаках в Туле</title>
+<meta name="description" content="Бутик-студия в центре Тулы: пилатес на реформерах и растяжка в гамаках в мини-группах до 4 человек. Первое занятие −50%.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@700;800;900&display=swap">
+<style>
+:root {
+  --bg: #FFF6F3;
+  --surface: #FDE5E0;
+  --surface-2: #FFFFFF;
+  --ink: #3F1A36;
+  --ink-soft: #6E4D66;
+  --plum: #946391;
+  --btn: #946391;
+  --btn-hover: #643C54;
+  --btn-ink: #FFFFFF;
+  --plum-deep: #643C54;
+  --glow: #F3C77A;
+  --line: rgba(63, 26, 54, .14);
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --brand: "Unbounded", "Arial Black", Arial, sans-serif;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 84px); scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+:focus-visible { outline: 2px solid var(--plum); outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+
+.wrap { width: min(1200px, 100%); margin-inline: auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 800px) { .wrap { padding-inline: 48px; } }
+
+/* Арка — главный мотив: как зеркала в зале, с тёплой подсветкой */
+.arch { border-radius: 999px 999px 18px 18px; overflow: hidden; position: relative; background: var(--surface); }
+.arch img { width: 100%; height: 100%; object-fit: cover; }
+.arch--glow { box-shadow: 0 0 0 2px rgba(243, 199, 122, .85), 0 0 28px 6px rgba(243, 199, 122, .45), 0 0 80px 10px rgba(243, 199, 122, .18); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 999px; font: 700 16px/1 var(--sans); text-decoration: none; border: 1.5px solid var(--btn); background: var(--btn); color: var(--btn-ink); cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+.btn:hover { background: var(--btn-hover); border-color: var(--btn-hover); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn--ghost:hover { background: var(--surface); color: var(--ink); border-color: var(--surface); }
+
+/* Шапка */
+.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding-top: env(safe-area-inset-top, 0px); border-bottom: 1px solid var(--line); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+.logo { position: relative; display: inline-block; padding: 6px 14px 4px 12px; font-family: var(--brand); font-weight: 700; font-size: 26px; line-height: 1; letter-spacing: .01em; color: var(--plum); text-decoration: none; }
+.logo .sp { position: absolute; fill: #E2B565; }
+.logo .sp1 { width: 12px; height: 18px; left: -6px; top: -8px; }
+.logo .sp2 { width: 8px; height: 12px; right: -2px; bottom: -6px; }
+.nav { display: none; gap: 28px; margin-left: auto; font-size: 15px; font-weight: 500; }
+.nav a { text-decoration: none; color: var(--ink-soft); }
+.nav a:hover { color: var(--ink); }
+.top .btn { margin-left: auto; min-height: 44px; padding: 0 20px; font-size: 15px; }
+@media (min-width: 960px) { .nav { display: flex; } .top .btn { margin-left: 8px; } }
+
+/* Первый экран */
+.hero .wrap { display: grid; gap: 36px 56px; padding-block: 48px 72px; align-items: center; }
+@media (min-width: 900px) { .hero .wrap { grid-template-columns: 1fr 1fr; gap: 56px; padding-block: 64px 96px; } }
+.hero-pic { margin: 0; }
+.hero-pic img { width: 100%; height: auto; aspect-ratio: 1932 / 1680; object-fit: cover; border-radius: 14px; }
+.hero h1 { grid-column: 1 / -1; font-family: var(--serif); font-weight: 500; font-size: clamp(27px, 7.2vw, 86px); line-height: 1.02; letter-spacing: -.01em; }
+.hero h1 span { display: block; white-space: nowrap; }
+.hero .lead { margin-top: 0; font-size: 19px; color: var(--ink-soft); max-width: 34em; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.facts { display: flex; flex-wrap: wrap; gap: 12px 36px; margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--line); max-width: 560px; }
+.facts p { font-size: 15px; color: var(--ink-soft); }
+.facts .hours p + p { margin-top: 4px; }
+.facts .hours b { display: inline; margin-right: 4px; }
+.facts b { display: block; font-family: var(--brand); font-weight: 800; font-size: 22px; color: var(--plum-deep); }
+.hero-media { position: relative; justify-self: center; width: min(100%, 440px); padding: 18px; }
+.hero-media .arch { aspect-ratio: 3 / 4.1; }
+.hero-media .script { position: absolute; left: -6px; bottom: 54px; font-family: var(--script); font-size: 34px; color: var(--rasp); background: var(--bg); padding: 6px 18px 4px; border-radius: 999px; transform: rotate(-5deg); box-shadow: 0 10px 30px -12px rgba(63, 26, 54, .35); }
+
+/* Заголовки секций */
+.sec { padding-block: 72px; }
+@media (min-width: 800px) { .sec { padding-block: 104px; } }
+.sec-head { display: grid; gap: 14px; max-width: 640px; margin-bottom: 44px; }
+.sec-head h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5vw, 60px); line-height: 1.02; text-wrap: balance; }
+.sec-head p { color: var(--ink-soft); font-size: 18px; }
+
+/* Направления */
+.dirs { display: grid; gap: 56px; }
+@media (min-width: 760px) { .dirs { grid-template-columns: 1fr 1fr; gap: 40px; } }
+.dir .arch { aspect-ratio: 4 / 5; }
+.dir h3 { font-family: var(--serif); font-weight: 500; font-size: 36px; line-height: 1.1; margin-top: 28px; }
+.dir p { color: var(--ink-soft); margin-top: 10px; max-width: 32em; }
+.dir ul { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.dir li { padding-left: 24px; position: relative; }
+.dir li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--plum); font-size: 14px; line-height: 1.75; }
+.dir .price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-top: 22px; }
+.dir .price b { font-family: var(--brand); font-weight: 800; font-size: 22px; color: var(--plum); }
+.dir .price span { color: var(--ink-soft); font-size: 15px; }
+.trial { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 24px; padding: 16px 20px; border-radius: 18px; background: var(--surface); }
+.trial .tl { width: 100%; font-weight: 600; font-size: 15px; color: var(--ink-soft); }
+.trial b { font-family: var(--brand); font-weight: 800; font-size: 28px; color: var(--plum); line-height: 1; }
+.trial s { font-size: 17px; color: var(--ink-soft); }
+.badge { order: 3; font: 800 13px/1 var(--brand); padding: 6px 10px; border-radius: 999px; background: #B83E6A; color: #FFF6F3; }
+.dir .btn { margin-top: 22px; }
+
+/* Студия */
+.studio { background: var(--surface); }
+.studio .wrap { display: grid; gap: 44px; }
+@media (min-width: 960px) { .studio .wrap { grid-template-columns: .75fr 1.25fr; align-items: center; gap: 56px; } }
+.studio .sec-head { margin-bottom: 0; }
+.studio .quote { font-family: var(--script); font-size: 30px; color: var(--rasp); margin-top: 18px; }
+.collage { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; }
+.collage img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
+.collage .c1 { grid-row: span 2; } .collage .c2 { grid-row: span 2; } .collage .c3 { grid-row: span 1; } .collage .c4 { grid-row: span 2; } .collage .c5 { grid-row: span 1; }
+@media (min-width: 760px) { .collage { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 170px; } .collage .c1 { grid-column: span 2; grid-row: span 2; } .collage .c2 { grid-row: span 2; } .collage .c3 { grid-row: span 1; } .collage .c4 { grid-row: span 1; } .collage .c5 { grid-column: span 4; grid-row: span 1; display: none; } }
+.studio-list { grid-column: 1 / -1; display: grid; gap: 18px; padding: 0; margin: 0; list-style: none; }
+@media (min-width: 760px) { .studio-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; } }
+.studio-list li { border-top: 1px solid var(--line); padding-top: 16px; }
+.studio-list b { display: block; font-weight: 700; margin-bottom: 4px; }
+.studio-list span { color: var(--ink-soft); font-size: 15px; }
+.pill { display: inline-flex; align-items: center; margin: 8px 0 0 12px; min-height: 34px; padding: 0 14px; border-radius: 999px; background: var(--btn); color: #FFFFFF; font-weight: 700; font-size: 14px; text-decoration: none; }
+.pill:hover { background: var(--btn-hover); }
+
+/* Форматы */
+.formats { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.fmt { display: grid; gap: 10px 32px; padding-block: 28px; border-bottom: 1px solid var(--line); align-items: center; }
+@media (min-width: 800px) { .fmt { grid-template-columns: 300px 1fr auto; } }
+.fmt h3 { font-family: var(--serif); font-weight: 500; font-size: 32px; line-height: 1.1; }
+.fmt p { color: var(--ink-soft); max-width: 36em; }
+.fmt .from { font-family: var(--brand); font-weight: 800; font-size: 20px; color: var(--plum); white-space: nowrap; }
+.fmt .from small { font-family: var(--sans); font-weight: 500; font-size: 14px; color: var(--ink-soft); }
+.sub-h { font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.1; margin-top: 64px; }
+.sub-p { color: var(--ink-soft); margin-top: 10px; max-width: 40em; }
+.combo { margin-top: 28px; display: grid; gap: 16px; }
+@media (min-width: 800px) { .combo { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.combo div { background: var(--surface); border-radius: 22px; padding: 24px; }
+.fic { display: inline-block; vertical-align: middle; height: 26px; width: auto; margin-left: 8px; fill: none; stroke: #B83E6A; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.combo h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; }
+.combo p { color: var(--ink-soft); font-size: 15px; margin-top: 6px; }
+.combo .sum { margin-top: 14px; font-family: var(--brand); font-weight: 800; font-size: 22px; color: var(--plum); }
+.combo s { font-family: var(--sans); font-size: 15px; color: var(--ink-soft); margin-left: 8px; font-weight: 500; }
+
+/* Цены */
+.tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 20px; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: none; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); font: 600 15px/1 var(--sans); cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.switch { display: inline-flex; padding: 4px; border-radius: 999px; background: var(--surface); margin-bottom: 24px; }
+.switch button { min-height: 40px; padding: 0 16px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-soft); font: 600 14px/1 var(--sans); cursor: pointer; }
+.switch button[aria-pressed="true"] { background: var(--surface-2); color: var(--ink); box-shadow: 0 2px 8px -4px rgba(63, 26, 54, .35); }
+.switch[hidden] { display: none; }
+.plist { display: grid; gap: 14px; }
+@media (min-width: 760px) { .plist { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1080px) { .plist { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.pc { background: var(--surface-2); border: 1px solid var(--line); border-radius: 22px; padding: 26px 24px; display: grid; gap: 6px; align-content: start; }
+.pc h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; line-height: 1.1; }
+.pc .sum { font-family: var(--brand); font-weight: 800; font-size: 26px; color: var(--plum); margin-top: 10px; }
+.pc .lbl { font-family: var(--sans); font-weight: 700; font-size: 14px; color: #B83E6A; white-space: nowrap; }
+.pc .sl { font-family: var(--sans); font-weight: 500; color: var(--ink-soft); margin: 0 4px; }
+.pc .sum { line-height: 1.5; }
+.plist.wide { grid-template-columns: 1fr; gap: 10px; }
+.plist.wide .pc { grid-template-columns: 1fr; padding: 18px 24px; }
+@media (min-width: 760px) { .plist.wide .pc { grid-template-columns: 220px 1fr; align-items: center; } .plist.wide .pc .sum { margin-top: 0; font-size: 24px; } }
+.pc .per { font-size: 14px; color: var(--ink-soft); }
+.pc .note { font-size: 14px; color: var(--ink-soft); margin-top: 6px; }
+.pc .tag { justify-self: start; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: var(--surface); color: var(--plum); margin-bottom: 6px; }
+.pc--trial { border-color: rgba(243, 199, 122, .55); box-shadow: 0 0 0 1px rgba(243, 199, 122, .35), 0 0 30px -6px rgba(243, 199, 122, .35); }
+.pc--hot { background: #946391; border-color: #946391; color: #FFFFFF; }
+.pc--hot .sum, .pc--hot .per, .pc--hot .note { color: #FFFFFF; }
+.pc--hot .tag { background: rgba(255, 255, 255, .2); color: #FFFFFF; }
+.pfine { margin-top: 22px; font-size: 15px; color: var(--ink-soft); max-width: 60em; }
+
+#ribbon { position: absolute; left: 0; top: 0; pointer-events: none; z-index: 1; }
+:root { --halo: var(--bg); }
+.studio, .band, .combo > div, .trial { --halo: var(--surface); }
+.pc, .offer { --halo: var(--surface-2); }
+.pc--hot { --halo: #946391; }
+main h1, main h2, main h3, main p, main li, main .tl, footer p, footer h3 { position: relative; z-index: 2; text-shadow: 0 0 3px var(--halo), 0 0 6px var(--halo), 0 0 10px var(--halo), 0 0 14px var(--halo), 0 0 18px var(--halo); }
+main .btn, main .pill, main .badge, main .tab, footer a { text-shadow: none; }
+.arch, .hero-pic, .collage img, .seal, .trial, .pc, .offer, .combo > div, .btn, .pill, .tab, .switch, .badge { position: relative; z-index: 2; }
+#ribbon path { fill: none; stroke: #B83E6A; stroke-width: 3; stroke-linecap: round; opacity: .45; }
+body { position: relative; overflow-x: hidden; }
+/* Акции */
+.offers { display: grid; gap: 14px; }
+@media (min-width: 760px) { .offers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.offer { display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; align-items: start; padding: 26px; border-radius: 22px; background: var(--surface-2); border: 1px solid #D9A94F; }
+.offer .big { grid-row: span 2; font-family: var(--brand); font-weight: 800; font-size: 40px; line-height: 1; color: var(--plum); min-width: 3.2ch; }
+.offer h3 { font-weight: 700; font-size: 18px; }
+.offer p { color: var(--ink-soft); font-size: 15px; }
+
+/* Финал */
+.final { background: var(--bg); color: var(--ink); border-top: 1px solid var(--line); }
+.final .wrap { display: grid; gap: 36px; align-items: center; padding-block: 72px; }
+@media (min-width: 880px) { .final .wrap { grid-template-columns: 1fr 1fr; padding-block: 88px; } }
+.final .seal { width: min(80%, 380px); height: auto; aspect-ratio: 1; object-fit: cover; justify-self: center; border-radius: 50%; box-shadow: 0 0 0 2px rgba(243, 199, 122, .85), 0 0 34px 6px rgba(243, 199, 122, .35); }
+.final h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 5.4vw, 68px); line-height: 1; text-wrap: balance; }
+.final p { margin-top: 18px; font-size: 18px; color: var(--ink-soft); max-width: 30em; }
+.final .btn { margin-top: 30px; }
+
+/* Контакты */
+.contacts .wrap { display: grid; gap: 28px; padding-block: 64px 40px; }
+@media (min-width: 800px) { .contacts .wrap { grid-template-columns: 1.2fr 1fr 1fr 1fr; } }
+.contacts .row { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+.contacts .soft { font-size: 15px; color: var(--ink-soft); }
+.ic { flex: none; width: 20px; height: 20px; margin-top: 3px; fill: none; stroke: var(--plum); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.contacts h3 { font-size: 14px; font-weight: 700; color: var(--ink-soft); margin-bottom: 6px; }
+.contacts p, .contacts a { font-size: 17px; }
+.contacts a { text-decoration: none; border-bottom: 1px solid var(--line); }
+.contacts a:hover { border-color: var(--plum); }
+.legal { border-top: 1px solid var(--line); }
+.legal .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-block: 20px; font-size: 14px; color: var(--ink-soft); }
+.legal .s { font-family: var(--script); font-size: 22px; color: var(--rasp); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#start" aria-label="СИЯЙ — на главную"><svg class="sp sp1" viewBox="0 0 16 24" aria-hidden="true"><path d="M8 0 L9.1 10.6 L16 12 L9.1 13.4 L8 24 L6.9 13.4 L0 12 L6.9 10.6 Z"/></svg>СИЯЙ<svg class="sp sp2" viewBox="0 0 16 24" aria-hidden="true"><path d="M8 0 L9.1 10.6 L16 12 L9.1 13.4 L8 24 L6.9 13.4 L0 12 L6.9 10.6 Z"/></svg></a>
+    <nav class="nav" aria-label="Разделы сайта">
+      <a href="#directions">Направления</a>
+      <a href="#studio">Студия</a>
+      <a href="#formats">Форматы</a>
+      <a href="#prices">Цены</a>
+      <a href="#offers">Акции</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn" href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Записаться</a>
+  </div>
+</header>
+
+<main id="start">
+  <section class="hero">
+    <div class="wrap">
+      <h1><span>СИЯЙ&nbsp;— место твоего</span> <span>спокойствия и энергии</span></h1>
+      <div class="hero-text">
+        <p class="lead">Бутик-студия пилатеса на реформерах и растяжки в гамаках в центре Тулы. В группе не больше четырёх человек, поэтому тренер видит каждую и подбирает нагрузку под вас.</p>
+        <div class="ctas">
+          <a class="btn" href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Записаться на пробное за полцены</a>
+          <a class="btn btn--ghost" href="#prices">Посмотреть цены</a>
+        </div>
+        <div class="facts">
+          <p><b>до 4</b>человек в группе</p>
+          <p><b>2</b>направления</p>
+          <div class="hours"><p><b>09:00–21:00</b> по будням</p><p><b>09:00–16:00</b> в выходные</p></div>
+        </div>
+      </div>
+      <figure class="hero-pic"><img src="photo1.jpg" alt="Зал студии СИЯЙ: реформеры перед арочными зеркалами с подсветкой" width="1932" height="1680"></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="directions">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Два направления, которые дополняют друг друга</h2>
+        <p>Реформер делает тело сильным, гамаки — гибким и лёгким. Можно выбрать одно или совмещать оба в абонементе «Микс».</p>
+      </div>
+      <div class="dirs">
+        <article class="dir">
+          <div class="arch"><img src="photo2.jpg" alt="Упражнение на реформере с петлями на ногах у панорамного окна" loading="lazy" width="849" height="1500"></div>
+          <h3>Пилатес на реформерах</h3>
+          <p>Реформер — тренажёр с подвижной кареткой и пружинами. Пружины задают нагрузку, поэтому заниматься можно с любым уровнем подготовки.</p>
+          <ul>
+            <li>укрепляет мышцы кора и спину</li>
+            <li>выравнивает осанку</li>
+            <li>делает тело подтянутым без нагрузки на суставы</li>
+          </ul>
+          <div class="trial"><span class="badge">−50%</span><span class="tl">Пробное занятие</span><b>900&nbsp;₽</b><s>1&nbsp;800&nbsp;₽</s></div>
+          <a class="btn" href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Записаться на реформер</a>
+        </article>
+        <article class="dir">
+          <div class="arch"><img src="photo3.jpg" alt="Растяжка в розовом гамаке" style="object-position: 50% 72%; transform: scale(1.22); transform-origin: 66% 88%" loading="lazy" width="874" height="1500"></div>
+          <h3>Растяжка в гамаках</h3>
+          <p>Гамак поддерживает тело и помогает мягко и безопасно тянуться глубже, чем на коврике. После занятия спина отдыхает, а в теле появляется лёгкость.</p>
+          <ul>
+            <li>развивает гибкость</li>
+            <li>вытягивает и расслабляет позвоночник</li>
+            <li>снимает напряжение после рабочего дня</li>
+          </ul>
+          <div class="trial"><span class="badge">−50%</span><span class="tl">Пробное занятие</span><b>500&nbsp;₽</b><s>1&nbsp;000&nbsp;₽</s></div>
+          <a class="btn" href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Записаться на гамаки</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec studio" id="studio">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Студия на шестом этаже с прекрасным видом</h2>
+        <p>Арочные зеркала с тёплой подсветкой, панорамные окна, пудровые реформеры и шёлковые гамаки. Сюда приходят не только за тренировкой, но и за ощущением, что этот час принадлежит только вам.</p>
+        
+      </div>
+      <div class="collage">
+        <img class="c1" src="photo4.jpg" alt="Вход в зал: бархатные шторы, гамаки на фоне окна и лампа с перьями" loading="lazy" width="1100" height="1467">
+        <img class="c2" src="photo5.jpg" alt="Гамаки над реформерами в зале" loading="lazy" width="844" height="1500">
+        <img class="c3" src="photo6.jpg" alt="Корзина с мячом и изотоническим кольцом на реформере" loading="lazy" width="1100" height="1467">
+        <img class="c4" src="photo7.jpg" alt="Розовые гамаки и коврики" loading="lazy" width="1100" height="1467">
+        <img class="c5" src="photo8.jpg" alt="Каретка реформера с петлями, вид сверху" loading="lazy" width="844" height="1500">
+      </div>
+      <ul class="studio-list">
+        <li><b>Адрес</b><span>ул. Московская, 34, 6 этаж, офис 103</span></li>
+        <li><b>Парковка</b><span>собственная, с большим количеством мест</span></li>
+        <li><b>Раздевалки</b><span>мужская и женская, шкафчики с кодовыми замками</span></li>
+        <li><b>Онлайн-запись</b><span>через DIKIDI в пару касаний</span><a class="pill" href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Записаться</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="formats">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Когда хочется больше внимания</h2>
+        <p>Эти форматы проходят в свободное от мини-групп время, по предварительной записи.</p>
+      </div>
+      <div class="formats">
+        <div class="fmt"><h3>Персонально <svg class="fic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3.2"/><path d="M6 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/></svg></h3><p>Только вы и тренер. Программа под ваши цели, технику ставим с первого занятия.</p><span class="from"><small>от </small>1 900 ₽</span></div>
+        <div class="fmt"><h3>«Дуэт» <svg class="fic" viewBox="0 0 30 24" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M3 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/><circle cx="21" cy="7" r="3.2"/><path d="M15 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/></svg></h3><p>Тренировка для двоих: с подругой, мамой или партнёром. Цена за двоих.</p><span class="from"><small>от </small>2 800 ₽</span></div>
+        <div class="fmt"><h3>«Своя группа» <svg class="fic" viewBox="0 0 46 24" aria-hidden="true"><circle cx="7" cy="7" r="3.2"/><path d="M1 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/><circle cx="17.5" cy="7" r="3.2"/><path d="M11.5 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/><circle cx="28" cy="7" r="3.2"/><path d="M22 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/><circle cx="38.5" cy="7" r="3.2"/><path d="M32.5 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/></svg></h3><p>Закрытое занятие для вашей компании из четырёх человек в удобное время. Подходит и для корпоративных тренировок.</p><span class="from"><small>от </small>4 800 ₽</span></div>
+      </div>
+      <h3 class="sub-h">Комбинированные абонементы</h3>
+      <p class="sub-p">Персональные тренировки, чтобы поставить технику, и занятия в мини-группе на реформере в одном абонементе.</p>
+      <div class="combo">
+        <div><h3>«Знакомство» <svg class="fic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 14c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/><path d="M8 21h8"/></svg></h3><p>1 персональная и 4 групповых на реформере, 30 дней</p><p class="sum">7 990 ₽<s>8 890 ₽</s></p></div>
+        <div><h3>«Баланс» <svg class="fic" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="18.5" rx="7" ry="2.6"/><ellipse cx="12" cy="12.6" rx="5" ry="2.2"/><ellipse cx="12" cy="7.4" rx="3.2" ry="1.8"/></svg></h3><p>2 персональные и 8 групповых на реформере, 45 дней</p><p class="sum">13 990 ₽<s>15 790 ₽</s></p></div>
+        <div><h3>«Фокус» <svg class="fic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c.8 5.6 2.6 7.6 9 10-6.4 2.4-8.2 4.4-9 10-.8-5.6-2.6-7.6-9-10 6.4-2.4 8.2-4.4 9-10z"/></svg></h3><p>4 персональные и 4 групповых на реформере, 45 дней</p><p class="sum">14 990 ₽<s>16 980 ₽</s></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="prices">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Цены</h2>
+        <p>Дневные абонементы действуют по будням с 09:00 до 17:00 и стоят дешевле. Абонементы «полный день» — в любое время работы студии.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Категории цен" id="tabs"></div>
+      <div class="switch" id="switch" role="group" aria-label="Время посещения">
+        <button type="button" data-mode="full" aria-pressed="true">Полный день</button>
+        <button type="button" data-mode="day" aria-pressed="false">Дневной</button>
+      </div>
+      <div class="plist" id="plist" role="tabpanel"></div>
+      <p class="pfine" id="pfine"></p>
+    </div>
+  </section>
+
+  <section class="sec studio" id="offers">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Акции</h2>
+      </div>
+      <div class="offers" style="grid-column:1/-1">
+        <div class="offer"><span class="big">−50%</span><h3>Первое занятие</h3><p>Пробное на реформере за 900 ₽, в гамаках — за 500 ₽.</p></div>
+        <div class="offer"><span class="big">−10%</span><h3>Абонемент в день пробного</h3><p>Понравилось? Оформите абонемент в тот же день со скидкой.</p></div>
+        <div class="offer"><span class="big">−15%</span><h3>В честь дня рождения</h3><p>На абонемент в день рождения и 7 дней после него.</p></div>
+        <div class="offer"><span class="big">−10%</span><h3>Приведите подругу</h3><p>Скидка на ваш следующий абонемент за каждую подругу, которая купит абонемент.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <img class="seal" src="photo9.jpg" alt="Логотип СИЯЙ: пилатес и стретчинг" width="900" height="900">
+      <div>
+        <h2>Приходите знакомиться</h2>
+        <p>Выберите направление и запишитесь на пробное занятие за полцены. Тренер подберёт нагрузку, даже если вы занимаетесь впервые.</p>
+        <a class="btn" href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Записаться онлайн</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contacts" id="contacts">
+  <div class="wrap">
+    <div><p style="margin-top:0;color:var(--ink-soft);font-size:15px">Пилатес на реформерах и растяжка в гамаках. Мини-группы до 4 человек.</p></div>
+    <div><h3>Адрес</h3>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><a href="https://yandex.ru/maps/?text=%D0%A2%D1%83%D0%BB%D0%B0%2C%20%D1%83%D0%BB.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%2034" target="_blank" rel="noopener">Тула, ул. Московская, 34</a><br><span class="soft">6 этаж, офис 103</span></span></p></div>
+    <div><h3>Телефон и часы работы</h3>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+79101501118">+7 (910) 150-11-18</a></p>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Пн–Пт 09:00–21:00<br>Сб–Вс 09:00–16:00</span></p></div>
+    <div><h3>Запись и соцсети</h3>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><a href="https://dikidi.net/siyaime" target="_blank" rel="noopener">Онлайн-запись в DIKIDI</a></p>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 9-6-6 8"/></svg><a href="https://t.me/siyaime" target="_blank" rel="noopener">Telegram</a></p>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r=".9" fill="currentColor" stroke="none"/></svg><a href="https://instagram.com/siyai.me" target="_blank" rel="noopener">Instagram</a></p>
+      <p class="row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M7 9c.4 3.6 2.2 6 4.6 6.2V12.6M11.6 9v3.6c1.4-.2 2.6-1.6 3-3.6M14.6 12.6c1.1.4 2.2 1.5 2.6 2.6"/></svg><a href="https://vk.com/siyaime" target="_blank" rel="noopener">ВКонтакте</a></p></div>
+  </div>
+  <div class="legal"><div class="wrap"><span>© 2026 СИЯЙ, Тула</span><span>Пилатес на реформерах и растяжка в гамаках</span></div></div>
+</footer>
+
+<script>
+(function () {
+  var R = "\u00a0₽";
+  function f(n) { return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0") + R; }
+  var CATS = [
+    { id: "ref", name: "Реформер", modes: true, fine: "Абонементы на 12 занятий действуют 45 дней, заморозка 7 дней.", items: [
+      { t: "Пробное занятие", full: 900, day: 900, old: 1800, badge: "−50%", note: "первое занятие на реформере" },
+      { t: "Разовое занятие", full: 1800, day: 1800, n: 1 },
+      { t: "4 занятия", full: 5990, day: 4990, n: 4, note: "30 дней" },
+      { t: "8 занятий", full: 9990, day: 8490, n: 8, note: "30 дней", tag: "Хит" },
+      { t: "12 занятий", full: 12990, day: 10990, n: 12, note: "45 дней, заморозка 7 дней", tag: "Выгоднее всего" } ] },
+    { id: "ham", name: "Гамаки", modes: true, fine: "Абонементы на 12 занятий действуют 45 дней, заморозка 7 дней.", items: [
+      { t: "Пробное занятие", full: 500, day: 500, old: 1000, badge: "−50%", note: "первое занятие в гамаках" },
+      { t: "Разовое занятие", full: 1000, day: 1000, n: 1 },
+      { t: "4 занятия", full: 3390, day: 2990, n: 4, note: "30 дней" },
+      { t: "8 занятий", full: 5990, day: 5390, n: 8, note: "30 дней", tag: "Хит" },
+      { t: "12 занятий", full: 7990, day: 6590, n: 12, note: "45 дней, заморозка 7 дней", tag: "Выгоднее всего" } ] },
+    { id: "mix", name: "Безлимит и «Микс»", modes: false, fine: "Оба абонемента действуют в любое время работы студии.", items: [
+      { t: "Безлимит «СИЯЙ»", full: 23990, note: "реформер и гамаки без ограничений, 30 дней, заморозка 7 дней", tag: "Всего 6 мест", hot: true },
+      { t: "«Микс»", full: 8490, note: "4 занятия на реформере и 4 в гамаках, 30 дней", old: 9380 } ] },
+    { id: "combo", name: "Комбинированные", modes: false, fine: "Групповые занятия входят в абонемент в любое время работы студии.", items: [
+      { t: "«Знакомство»", full: 7990, old: 8890, note: "1 персональная и 4 групповых на реформере, 30 дней" },
+      { t: "«Баланс»", full: 13990, old: 15790, note: "2 персональные и 8 групповых на реформере, 45 дней", tag: "Хит" },
+      { t: "«Фокус»", full: 14990, old: 16980, note: "4 персональные и 4 групповых на реформере, 45 дней" } ] },
+    { id: "pt", name: "Персональные", modes: false, fine: "Абонемент на 4 занятия действует 30 дней, на 8 — 45 дней, на 12 — 60 дней.", items: [
+      { t: "1 занятие", full: 2900, alt: 1900, n: 1 },
+      { t: "4 занятия", full: 10990, alt: 7190, n: 4 },
+      { t: "8 занятий", full: 20890, alt: 13690, n: 8 },
+      { t: "12 занятий", full: 28790, alt: 19190, n: 12 } ] },
+    { id: "duo", name: "«Дуэт»", modes: false, fine: "Цена указана за двоих.", items: [
+      { t: "1 занятие", full: 4400, alt: 2800 },
+      { t: "4 занятия", full: 15990, alt: 10390 },
+      { t: "8 занятий", full: 29990, alt: 19890 },
+      { t: "12 занятий", full: 41990, alt: 28590 } ] },
+    { id: "grp", name: "«Своя группа»", modes: false, fine: "Цена указана за компанию из 4 человек.", items: [
+      { t: "1 занятие", full: 7600, alt: 4800 },
+      { t: "4 занятия", full: 28890, alt: 18290 },
+      { t: "8 занятий", full: 54690, alt: 35190 },
+      { t: "12 занятий", full: 77490, alt: 49890 } ] }
+  ];
+  var cur = 0, mode = "full";
+  var tabs = document.getElementById("tabs"), list = document.getElementById("plist"), fine = document.getElementById("pfine"), sw = document.getElementById("switch");
+  CATS.forEach(function (c, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "tab"; b.setAttribute("role", "tab"); b.id = "tab-" + c.id; b.textContent = c.name;
+    b.addEventListener("click", function () { cur = i; render(); });
+    tabs.appendChild(b);
+  });
+  sw.querySelectorAll("button").forEach(function (b) {
+    b.addEventListener("click", function () { mode = b.dataset.mode; render(); });
+  });
+  function render() {
+    var c = CATS[cur];
+    tabs.querySelectorAll(".tab").forEach(function (b, i) { b.setAttribute("aria-selected", i === cur ? "true" : "false"); });
+    list.setAttribute("aria-labelledby", "tab-" + c.id);
+    list.classList.toggle("wide", !!c.items[0].alt);
+    sw.hidden = !c.modes;
+    sw.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.mode === mode ? "true" : "false"); });
+    list.innerHTML = c.items.map(function (it) {
+      var price = c.modes ? it[mode] : it.full;
+      var sum = it.alt ? f(it.full) + " <span class='lbl'>пилатес на реформере</span> <span class='sl'>/</span> " + f(it.alt) + " <span class='lbl'>растяжка в гамаках</span>" : f(price);
+      var per = (it.n && it.n > 1 && !it.alt) ? f(Math.round(price / it.n)) + " за занятие" : "";
+      return "<div class='pc" + (it.hot ? " pc--hot" : "") + (it.badge ? " pc--trial" : "") + "'>" + (it.tag ? "<span class='tag'>" + it.tag + "</span>" : "") + (it.badge ? "<span class='badge' style='justify-self:start;order:0;margin-bottom:6px'>" + it.badge + "</span>" : "") +
+        "<h3>" + it.t + "</h3><p class='sum'>" + sum + (it.old ? " <s style='font:500 16px var(--sans);opacity:.75;margin-left:6px'>" + f(it.old) + "</s>" : "") + "</p>" +
+        (per ? "<p class='per'>" + per + "</p>" : "") + (it.note ? "<p class='note'>" + it.note + "</p>" : "") + "</div>";
+    }).join("");
+    fine.textContent = c.fine;
+  }
+  render();
+})();
+</script>
+<svg id="ribbon" aria-hidden="true"><path id="ribbon-path"/></svg>
+<script>
+(function () {
+  var svg = document.getElementById("ribbon"), path = document.getElementById("ribbon-path");
+  function draw() {
+    var w = document.documentElement.clientWidth, H = document.documentElement.scrollHeight;
+    svg.setAttribute("width", w); svg.setAttribute("height", H); svg.style.height = H + "px";
+    var step = Math.max(700, Math.min(1100, w * .75)), pts = [], xs = [.06, .9, .18, .96, .04, .82, .12, .94];
+    for (var y = -120, i = 0; y < H + step; y += step, i++) pts.push([w * xs[i % xs.length], y]);
+    var d = "M" + pts[0][0] + " " + pts[0][1];
+    for (var k = 0; k < pts.length - 1; k++) {
+      var p0 = pts[Math.max(0, k - 1)], p1 = pts[k], p2 = pts[k + 1], p3 = pts[Math.min(pts.length - 1, k + 2)];
+      d += " C" + (p1[0] + (p2[0] - p0[0]) / 6) + " " + (p1[1] + (p2[1] - p0[1]) / 6) + " " + (p2[0] - (p3[0] - p1[0]) / 6) + " " + (p2[1] - (p3[1] - p1[1]) / 6) + " " + p2[0] + " " + p2[1];
+    }
+    path.setAttribute("d", d);
+    path.style.strokeWidth = w < 700 ? "2" : "3";
+  }
+  window.addEventListener("load", draw); window.addEventListener("resize", draw); draw();
+})();
+</script>
+</body>
+</html>
